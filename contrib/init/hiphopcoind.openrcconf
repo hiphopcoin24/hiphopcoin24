@@ -1,0 +1,33 @@
+# /etc/conf.d/hiphopcoind: config file for /etc/init.d/hiphopcoind
+
+# Config file location
+#HIPHOPCOIND_CONFIGFILE="/etc/hiphopcoin/hiphopcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $HIPHOPCOIND_USER)
+#HIPHOPCOIND_PIDDIR="/var/run/hiphopcoind"
+
+# What filename to give the pidfile
+#HIPHOPCOIND_PIDFILE="${HIPHOPCOIND_PIDDIR}/hiphopcoind.pid"
+
+# Where to write hiphopcoind data (be mindful that the blockchain is large)
+#HIPHOPCOIND_DATADIR="/var/lib/hiphopcoind"
+
+# User and group to own hiphopcoind process
+#HIPHOPCOIND_USER="hiphopcoin"
+#HIPHOPCOIND_GROUP="hiphopcoin"
+
+# Path to hiphopcoind executable
+#HIPHOPCOIND_BIN="/usr/bin/hiphopcoind"
+
+# Nice value to run hiphopcoind under
+#HIPHOPCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#HIPHOPCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for hiphopcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+HIPHOPCOIND_SIGTERM_TIMEOUT=600
